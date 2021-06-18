@@ -1,0 +1,21 @@
+{
+  "name": "znkaz/iin",
+  "type": "extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Yamshikov Vitaliy",
+      "email": "theyamshikov@yandex.ru"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "zncore/domain": "v0.0.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "ZnKaz\\Iin\\": "src",
+      "ZnKaz\\Iin\\Tests\\": "tests"
+    }
+  }
+}
