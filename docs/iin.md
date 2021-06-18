@@ -3,7 +3,7 @@
 Получить инфо:
 
 ```php
-use ZnKaz\Base\Domain\Helpers\IinParser;
+use ZnKaz\Iin\Domain\Helpers\IinParser;
 
 $iinEntity = IinParser::parse('000000000000');
 ```

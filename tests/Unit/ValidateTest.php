@@ -2,11 +2,11 @@
 
 namespace ZnCore\Base\Tests\Unit;
 
-use ZnKaz\Base\Domain\Entities\IndividualEntity;
-use ZnKaz\Base\Domain\Entities\JuridicalEntity;
-use ZnKaz\Base\Domain\Exceptions\BadDateException;
-use ZnKaz\Base\Domain\Exceptions\BadTypeException;
-use ZnKaz\Base\Domain\Helpers\IinParser;
+use ZnKaz\Iin\Domain\Entities\IndividualEntity;
+use ZnKaz\Iin\Domain\Entities\JuridicalEntity;
+use ZnKaz\Iin\Domain\Exceptions\BadDateException;
+use ZnKaz\Iin\Domain\Exceptions\BadTypeException;
+use ZnKaz\Iin\Domain\Helpers\IinParser;
 use ZnTool\Test\Base\BaseTest;
 
 final class ValidateTest extends BaseTest
