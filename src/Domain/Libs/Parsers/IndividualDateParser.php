@@ -4,6 +4,7 @@ namespace ZnKaz\Iin\Domain\Libs\Parsers;
 
 use ZnKaz\Iin\Domain\Entities\DateEntity;
 use ZnKaz\Iin\Domain\Exceptions\BadDateException;
+use ZnKaz\Iin\Domain\Helpers\CenturyHelper;
 
 class IndividualDateParser implements DateParserInterface
 {
@@ -14,7 +15,7 @@ class IndividualDateParser implements DateParserInterface
         $dateEntity = new DateEntity();
 
         $century = substr($value, 6, 1);
-        $epoch = $this->getEpoch($century);
+        $epoch = CenturyHelper::getEpochFromCentury($century) * 100;
         $dateEntity->setDecade($smallYear);
         $dateEntity->setMonth(substr($value, 2, 2));
         $dateEntity->setDay(substr($value, 4, 2));
@@ -30,15 +31,5 @@ class IndividualDateParser implements DateParserInterface
         if (!$isValid) {
             throw new BadDateException();
         }
-    }
-
-    private function getEpoch(int $century): int
-    {
-        $residue = $century % 2;
-        if ($residue == 0) {
-            $century--;
-        }
-        $centuryDiv = floor($century / 2);
-        return ($centuryDiv + 18) * 100;
     }
 }

@@ -5,6 +5,7 @@ namespace ZnKaz\Iin\Domain\Libs\Parsers;
 use ZnKaz\Iin\Domain\Entities\BaseEntity;
 use ZnKaz\Iin\Domain\Entities\IndividualEntity;
 use ZnKaz\Iin\Domain\Enums\SexEnum;
+use ZnKaz\Iin\Domain\Helpers\CenturyHelper;
 
 class IndividualParser implements ParserInterface
 {
@@ -22,17 +23,11 @@ class IndividualParser implements ParserInterface
 
         $individualEntity = new IndividualEntity();
         $individualEntity->setValue($value);
-        $individualEntity->setSex($this->getSex($value));
+        $individualEntity->setSex(CenturyHelper::getSexFromCentury(substr($value, 6, 1)));
         $individualEntity->setCentury(substr($value, 6, 1));
         $individualEntity->setBirthday($dateEntity);
         $individualEntity->setSerialNumber(substr($value, 7, 4));
         $individualEntity->setCheckSum(substr($value, 11, 1));
         return $individualEntity;
-    }
-
-    private function getSex(string $value): string
-    {
-        $century = substr($value, 6, 1);
-        return !empty($century % 2) ? SexEnum::MALE : SexEnum::FEMALE;
     }
 }
