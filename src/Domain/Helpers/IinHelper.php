@@ -9,6 +9,12 @@ use ZnKaz\Iin\Domain\Libs\CheckSum;
 class IinHelper
 {
 
+    public static function extractNumber(string $iin): string
+    {
+        preg_match('/(\d+)/i', $iin, $matches);
+        return $matches[1];
+    }
+
     public static function entityToString(IndividualEntity $individualEntity): string
     {
         $iin =
