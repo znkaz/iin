@@ -1,0 +1,11 @@
+{
+  "jsonrpc": "2.0",
+  "method": "...",
+  "params": {
+    "body": {
+      "current_password": "qwerty123",
+      "new_password": "asdfg456",
+      "new_password_confirm": "asdfg456"
+    }
+  }
+}

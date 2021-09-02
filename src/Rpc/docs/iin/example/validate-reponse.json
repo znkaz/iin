@@ -1,0 +1,19 @@
+{
+  "jsonrpc": "2.0",
+  "result": {
+    "body": {
+      "sex": "female",
+      "birthday": {
+        "year": 1881,
+        "decade": 81,
+        "month": 3,
+        "day": 24,
+        "epoch": 1800
+      },
+      "century": 2,
+      "value": "810324229151",
+      "serialNumber": 2915,
+      "checkSum": 1
+    }
+  }
+}

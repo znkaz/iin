@@ -1,0 +1,9 @@
+{
+  "jsonrpc": "2.0",
+  "method": "iin.getInfo",
+  "params": {
+    "body": {
+      "code": "810324229151"
+    }
+  }
+}
