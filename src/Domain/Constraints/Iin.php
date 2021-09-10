@@ -7,5 +7,5 @@ use Symfony\Component\Validator\Constraint;
 class Iin extends Constraint
 {
 
-    public $message = 'IIN "{{ string }}" not found';
+    public $message = 'IIN "{{ value }}" not found';
 }

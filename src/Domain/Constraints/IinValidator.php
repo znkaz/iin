@@ -42,7 +42,7 @@ class IinValidator extends ConstraintValidator
                 $message = $e->getMessage();
             }
             $this->context->buildViolation($message)
-                ->setParameter('{{ string }}', $value)
+                ->setParameter('{{ value }}', $value)
                 ->addViolation();
         }
     }
