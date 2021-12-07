@@ -6,6 +6,7 @@ use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 use Symfony\Component\Validator\Exception\UnexpectedTypeException;
 use Symfony\Component\Validator\Exception\UnexpectedValueException;
+use ZnCore\Base\Libs\I18Next\Facades\I18Next;
 use ZnCore\Domain\Exceptions\UnprocessibleEntityException;
 use ZnKaz\Iin\Domain\Helpers\IinParser;
 use Exception;
@@ -36,8 +37,9 @@ class IinValidator extends ConstraintValidator
         try {
             $iinEntity = IinParser::parse($value);
         } catch (Exception $e) {
-            if($constraint->message) {
-                $message = $constraint->message;
+            $message = I18Next::t('kaz.iin', 'main.message.not_valid');
+            if($message) {
+                $message = $message;
             } else {
                 $message = $e->getMessage();
             }

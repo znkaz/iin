@@ -1,0 +1,7 @@
+{
+  "logout_title": "Шығу",
+  "action": {
+    "forgotPassword": "Құпия сөзіңізді ұмыттыңыз ба?",
+    "loginAction": "Кіру"
+  }
+}
