@@ -1,7 +1,5 @@
 {
-  "logout_title": "Шығу",
-  "action": {
-    "forgotPassword": "Құпия сөзіңізді ұмыттыңыз ба?",
-    "loginAction": "Кіру"
+  "message": {
+    "not_valid": "ЖСН \"{{ value }}\" жарамсыз"
   }
 }
