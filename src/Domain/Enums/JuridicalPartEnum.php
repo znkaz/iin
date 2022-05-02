@@ -2,7 +2,7 @@
 
 namespace ZnKaz\Iin\Domain\Enums;
 
-use ZnCore\Base\Interfaces\GetLabelsInterface;
+use ZnCore\Contract\Enum\Interfaces\GetLabelsInterface;
 
 class JuridicalPartEnum implements GetLabelsInterface
 {
