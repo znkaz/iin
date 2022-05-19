@@ -14,5 +14,7 @@ return [
         'handler_class' => \ZnKaz\Iin\Rpc\Controllers\IinController::class,
         'handler_method' => 'getInfo',
         'status_id' => 100,
+        'title' => null,
+        'description' => null,
     ],
 ];
