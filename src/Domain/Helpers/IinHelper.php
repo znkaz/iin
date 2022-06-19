@@ -2,7 +2,7 @@
 
 namespace ZnKaz\Iin\Domain\Helpers;
 
-use ZnCore\Base\Helpers\StringHelper;
+use ZnCore\Base\Libs\Text\Helpers\StringHelper;
 use ZnKaz\Iin\Domain\Entities\IndividualEntity;
 use ZnKaz\Iin\Domain\Libs\CheckSum;
 
