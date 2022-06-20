@@ -5,8 +5,8 @@ namespace ZnKaz\Iin\Domain\Libs;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\Regex;
-use ZnCore\Domain\Exceptions\UnprocessibleEntityException;
-use ZnCore\Domain\Helpers\ValidationHelper;
+use ZnCore\Base\Libs\Validation\Exceptions\UnprocessibleEntityException;
+use ZnCore\Base\Libs\Validation\Helpers\ValidationHelper;
 use ZnKaz\Iin\Domain\Exceptions\BadCheckSumException;
 use ZnKaz\Iin\Domain\Exceptions\CheckSumException;
 
@@ -28,8 +28,8 @@ class Validator
         ]);
         if ($violationList->count()) {
             $unprocessibleEntityException = new UnprocessibleEntityException();
-            foreach ($violationList as $validateErrorEntity) {
-                //$validateErrorEntity->setField('value');
+            foreach ($violationList as $ValidationErrorEntity) {
+                //$ValidationErrorEntity->setField('value');
             }
             $unprocessibleEntityException->setErrorCollection(ValidationHelper::createErrorCollectionFromViolationList($violationList));
             throw $unprocessibleEntityException;
