@@ -5,8 +5,8 @@ namespace ZnKaz\Iin\Domain\Libs;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\Regex;
-use ZnCore\Base\Libs\Validation\Exceptions\UnprocessibleEntityException;
-use ZnCore\Base\Libs\Validation\Helpers\ValidationHelper;
+use ZnCore\Base\Validation\Exceptions\UnprocessibleEntityException;
+use ZnCore\Base\Validation\Helpers\ValidationHelper;
 use ZnKaz\Iin\Domain\Exceptions\BadCheckSumException;
 use ZnKaz\Iin\Domain\Exceptions\CheckSumException;
 

@@ -6,8 +6,8 @@ use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 use Symfony\Component\Validator\Exception\UnexpectedTypeException;
 use Symfony\Component\Validator\Exception\UnexpectedValueException;
-use ZnCore\Base\Libs\I18Next\Facades\I18Next;
-use ZnCore\Base\Libs\Validation\Exceptions\UnprocessibleEntityException;
+use ZnCore\Base\I18Next\Facades\I18Next;
+use ZnCore\Base\Validation\Exceptions\UnprocessibleEntityException;
 use ZnKaz\Iin\Domain\Helpers\IinParser;
 use Exception;
 
