@@ -2,7 +2,7 @@
 
 namespace ZnKaz\Iin\Domain\Enums;
 
-use ZnCore\Base\Enum\Interfaces\GetLabelsInterface;
+use ZnCore\Enum\Interfaces\GetLabelsInterface;
 
 class TypeEnum implements GetLabelsInterface
 {
