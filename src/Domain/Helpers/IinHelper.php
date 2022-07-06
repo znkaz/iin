@@ -3,7 +3,7 @@
 namespace ZnKaz\Iin\Domain\Helpers;
 
 
-use ZnCore\Base\Text\Helpers\TextHelper;
+use ZnCore\Text\Helpers\TextHelper;
 use ZnKaz\Iin\Domain\Entities\IndividualEntity;
 use ZnKaz\Iin\Domain\Libs\CheckSum;
 
