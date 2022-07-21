@@ -7,12 +7,19 @@ use ZnCore\Bundle\Base\BaseBundle;
 class Bundle extends BaseBundle
 {
 
-    public function symfonyRpc(): array
+    public function rbac(): array
+    {
+        return [
+            __DIR__ . '/Domain/config/rbac.php',
+        ];
+    }
+
+    /*public function symfonyRpc(): array
     {
         return [
             __DIR__ . '/Rpc/config/routes.php',
         ];
-    }
+    }*/
 
     public function i18next(): array
     {
